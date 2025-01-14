@@ -1,19 +1,18 @@
 # Define global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR=5/9
-CELSIUS_TO_FAHRENHEIT_FACTOR=9/5
-FREEZING_POINT_DIFFERENCE=32
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 # Function to convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
     try:
-        return (fahrenheit - FREEZING_POINT_DIFFERENCE) * FAHRENHEIT_TO_CELSIUS_FACTOR
+        return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     except TypeError:
         raise ValueError("Invalid temperature. Please enter a numeric value.")
 
 # Function to convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
     try:
-        return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + FREEZING_POINT_DIFFERENCE
+        return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     except TypeError:
         raise ValueError("Invalid temperature. Please enter a numeric value.")
 
